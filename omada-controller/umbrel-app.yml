@@ -24,18 +24,18 @@ description: >-
 
   - Easier Network Maintenance : WiFi heatmap simulator, visualizable network report, and batch & multi-site management benefit network maintenance.
 
+
+  ⚠️ - This app can take 15-20 minutes to start after installation.
+
 developer: TP-Link / Matt Bentley
 website: https://github.com/mbentley/docker-omada-controller
 submitter: hugofnm
-submission: https://github.com/hugofnm/umbrel-omada-controller
 repo: https://github.com/hugofnm/umbrel-omada-controller
 support: https://github.com/hugofnm/umbrel-omada-controller/issues
 gallery:
-  - https://i.imgur.com/FuhxIS1.jpeg
-  - https://i.imgur.com/na4ZbmV.jpeg
-  - https://i.imgur.com/ftBMDeH.jpeg
-releaseNotes: >-
-  First release
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
 dependencies: []
 path: ""
 defaultUsername: ""
