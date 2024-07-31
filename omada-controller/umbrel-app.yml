@@ -35,8 +35,9 @@ repo: https://github.com/hugofnm/umbrel-omada-controller
 support: https://github.com/hugofnm/umbrel-omada-controller/issues
 gallery:
   - https://www.tp-link.com/us/user-guides/omada-sdn-software-controller/chapter-4-configure-the-network-with-omada-sdn-controller-web-resources/image/Homapage-overview.png
+releaseNotes: >
+  
 dependencies: []
 path: ""
-releaseNotes: ""
 defaultUsername: ""
 defaultPassword: ""

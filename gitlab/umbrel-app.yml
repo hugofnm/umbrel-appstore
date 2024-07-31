@@ -27,8 +27,9 @@ gallery:
   - https://images.ctfassets.net/xz1dnu24egyd/1CICz6PyQFbdvYOGrhDwkp/a7dd77cc5373c87d7da5bb67ff46ea8c/project-view.png
   - https://images.ctfassets.net/xz1dnu24egyd/17u4OSHpPXKTlcn2BMhaUR/d8a348bbe9a4a7060c97df7662893225/issue-board.png
   - https://images.ctfassets.net/xz1dnu24egyd/6V1DRh3syblkZHbWc3gJjL/3276578fe726245b9b76bbd311c14418/diff-view.png
+releaseNotes: >
+  
 dependencies: []
 path: ""
-releaseNotes: ""
 defaultUsername: "root"
 defaultPassword: "Read Description"
