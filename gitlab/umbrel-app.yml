@@ -2,9 +2,9 @@ manifestVersion: 1
 id: gitlab
 name: GitLab
 tagline: Software. Faster.
-category: networking
+category: Development
 version: "17.2.1"
-port: 8078
+port: 8929
 description: >-
   GitLab. Software. Faster.
 
