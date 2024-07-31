@@ -1,7 +1,12 @@
 version: "3.7"
 
 services:
-  gitlab:
+  app_proxy:
+    environment:
+      APP_HOST: gitlab_web_1
+      APP_PORT: 8929
+
+  web:
     image: zengxs/gitlab:17.2.1-ce.0@sha256:ac08a4dd997b6cd5d00d56c0027629de56ac80d9d30f9c4f75a73da73f5ff1b4
     container_name: gitlab
     restart: unless-stopped
@@ -11,6 +16,8 @@ services:
         soft: 4096
         hard: 8192
     environment:
+      PUID: 1000
+      PGID: 1000
       GITLAB_OMNIBUS_CONFIG: |
         # Add any other gitlab.rb configuration here, each on its own line
         gitlab_rails['initial_root_password'] = '${APP_PASSWORD}'
@@ -18,7 +25,6 @@ services:
         nginx['listen_port'] = 8929
         nginx['listen_https'] = false
     ports:
-      - '8929:8929'
       - '2424:22'
     volumes:
       - ${APP_DATA_DIR}/data/config:/etc/gitlab

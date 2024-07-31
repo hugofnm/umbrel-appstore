@@ -3,7 +3,7 @@ id: hugofnm-gitlab
 name: GitLab
 tagline: Software. Faster.
 icon: https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/svg/gitlab.svg
-category: Development
+category: Developer
 version: "17.2.1"
 port: 8929
 description: >-
