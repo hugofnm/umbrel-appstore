@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: gitlab
+id: hugofnm-gitlab
 name: GitLab
 tagline: Software. Faster.
 icon: https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/svg/gitlab.svg

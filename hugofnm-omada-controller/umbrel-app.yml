@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: omada-controller
+id: hugofnm-omada-controller
 name: Omada Controller
 tagline: On-Premises Omada SDN Controller
 icon: https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/svg/omada.svg
