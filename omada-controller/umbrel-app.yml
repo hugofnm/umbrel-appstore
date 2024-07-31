@@ -2,6 +2,7 @@ manifestVersion: 1
 id: omada-controller
 name: Omada Controller
 tagline: On-Premises Omada SDN Controller
+icon: https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/svg/omada.svg
 category: networking
 version: "5.14"
 port: 8078
@@ -39,3 +40,5 @@ gallery:
 dependencies: []
 path: ""
 releaseNotes: ""
+defaultUsername: ""
+defaultPassword: ""
