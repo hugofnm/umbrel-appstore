@@ -2,10 +2,10 @@ version: "3.7"
 
 services:
   gitlab:
-    image: gitlab/gitlab-ce:17.2.1-ce.0@sha256:9a5dff8bec16a32551b2069de505be134b30024e022ee72f30d0eddb9cccac95
+    image: zengxs/gitlab:17.2.1-ce.0@sha256:ac08a4dd997b6cd5d00d56c0027629de56ac80d9d30f9c4f75a73da73f5ff1b4
     container_name: gitlab
     restart: unless-stopped
-    hostname: 'http://${DEVICE_DOMAIN_NAME}:8929'
+    hostname: '${DEVICE_DOMAIN_NAME}:8929'
     ulimits:
       nofile:
         soft: 4096
@@ -13,7 +13,7 @@ services:
     environment:
       GITLAB_OMNIBUS_CONFIG: |
         # Add any other gitlab.rb configuration here, each on its own line
-        gitlab_root_password=${APP_PASSWORD}
+        gitlab_rails['initial_root_password'] = '${APP_PASSWORD}'
         gitlab_rails['gitlab_shell_ssh_port'] = 2424
         nginx['listen_port'] = 8929
         nginx['listen_https'] = false

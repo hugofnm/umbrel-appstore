@@ -15,9 +15,9 @@ description: >-
   Automate software delivery, boost productivity, and secure your end-to-end software supply chain.
 
 
-  ⚠️ - This app is RAM-intensive (+4GB recommended) and can take 15-20 minutes to start after installation.
+  ⚠️ - This app is RAM-intensive (+6GB recommended) and can take 15-20 minutes to start after installation.
 
-developer: GitLab
+developer: GitLab / zengxs
 website: https://about.gitlab.com
 submitter: hugofnm
 submission:
@@ -31,5 +31,6 @@ releaseNotes: >
   
 dependencies: []
 path: ""
+deterministicPassword: true
 defaultUsername: "root"
-defaultPassword: "Read Description"
+defaultPassword: ""
