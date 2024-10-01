@@ -2,17 +2,15 @@ manifestVersion: 1
 id: hugofnm-gitlab
 name: GitLab
 tagline: Software. Faster.
-icon: https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/svg/gitlab.svg
+icon: https://raw.githubusercontent.com/getumbrel/umbrel-apps-gallery/refs/heads/master/gitlab/icon.svg
 category: Developer
 version: "17.2.1"
 port: 8929
 description: >-
-  GitLab. Software. Faster.
+  ⚠️ This app is RAM-intensive (+6GB recommended) and can take 15-20 minutes to start after installation on low-powered devices.
+
 
   GitLab is a comprehensive, web-based DevOps lifecycle tool that provides a robust platform for managing projects and repositories. It offers a wide range of features that cater to the entire software development lifecycle, including version control, CI/CD, code review, issue tracking, and more. All operations are performed in a secure, collaborative environment, ensuring your code and data are safe and accessible.
-
-
-  ⚠️ - This app is RAM-intensive (+6GB recommended) and can take 15-20 minutes to start after installation.
 
   
   📁 Repository Management
@@ -44,7 +42,7 @@ description: >-
   
   Leverage GitLab's extensive set of tools to optimize your development process. Use the integrated wiki for documentation, manage packages with GitLab's built-in package registry, monitor performance with Prometheus and Grafana integration, and deploy applications with Kubernetes support. GitLab also offers robust APIs for extending functionality and integrating with other services.
   
-
+  
   GitLab is your all-in-one DevOps platform, empowering your team to build, deploy, and manage projects with ease and efficiency.
 
 developer: GitLab
@@ -54,9 +52,9 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/1290
 repo: https://github.com/zengxs/gitlab-arm64
 support: https://github.com/zengxs/gitlab-arm64/issues
 gallery:
-  - https://images.ctfassets.net/xz1dnu24egyd/1CICz6PyQFbdvYOGrhDwkp/a7dd77cc5373c87d7da5bb67ff46ea8c/project-view.png
-  - https://images.ctfassets.net/xz1dnu24egyd/17u4OSHpPXKTlcn2BMhaUR/d8a348bbe9a4a7060c97df7662893225/issue-board.png
-  - https://images.ctfassets.net/xz1dnu24egyd/6V1DRh3syblkZHbWc3gJjL/3276578fe726245b9b76bbd311c14418/diff-view.png
+  - https://raw.githubusercontent.com/getumbrel/umbrel-apps-gallery/refs/heads/master/gitlab/1.jpg
+  - https://raw.githubusercontent.com/getumbrel/umbrel-apps-gallery/refs/heads/master/gitlab/2.jpg
+  - https://raw.githubusercontent.com/getumbrel/umbrel-apps-gallery/refs/heads/master/gitlab/3.jpg
 releaseNotes: ""
 dependencies: []
 path: ""

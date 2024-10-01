@@ -2,7 +2,7 @@ manifestVersion: 1
 id: hugofnm-omada-controller
 name: Omada Controller
 tagline: On-Premises Omada SDN Controller
-icon: https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/svg/omada.svg
+icon: https://raw.githubusercontent.com/getumbrel/umbrel-apps-gallery/refs/heads/master/omada-controller/icon.svg
 category: Networking
 version: "5.14"
 port: 8078
@@ -34,7 +34,9 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/1196
 repo: https://github.com/hugofnm/umbrel-omada-controller
 support: https://github.com/hugofnm/umbrel-omada-controller/issues
 gallery:
-  - https://www.tp-link.com/us/user-guides/omada-sdn-software-controller/chapter-4-configure-the-network-with-omada-sdn-controller-web-resources/image/Homapage-overview.png
+  - https://raw.githubusercontent.com/getumbrel/umbrel-apps-gallery/refs/heads/master/omada-controller/1.jpg
+  - https://raw.githubusercontent.com/getumbrel/umbrel-apps-gallery/refs/heads/master/omada-controller/2.jpg
+  - https://raw.githubusercontent.com/getumbrel/umbrel-apps-gallery/refs/heads/master/omada-controller/3.jpg
 releaseNotes: >
   
 dependencies: []
