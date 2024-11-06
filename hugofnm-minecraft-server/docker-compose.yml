@@ -1,0 +1,32 @@
+version: "3.7"
+
+# docker-compose.yml
+services:
+  web:
+    image: ngc7331/mcsmanager-web:10.4.3@sha256:355972b9b4082fdfb766fe8f1a84ec95cdd446c1aa711ebcdcd743ffb47ea028
+    ports:
+      - "23333:23333"
+    network_mode: host
+    environment:
+      - PUID=1000
+      - PGID=1000
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ${APP_DATA_DIR}/data/web/data:/opt/mcsm/web/data
+      - ${APP_DATA_DIR}/data/web/logs:/opt/mcsm/web/logs
+
+  daemon:
+    image: ngc7331/mcsmanager-daemon:10.4.3-jdk22@sha256:b3b51e45e73234423a2d3674e78b6cdd756350720d1a402d09d9bf8f76cdbb69
+    restart: unless-stopped
+    ports:
+      - "24444:24444"
+      - "25565-25575:25565-25575"
+    network_mode: host
+    environment:
+      - PUID=1000
+      - PGID=1000
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ${APP_DATA_DIR}/data/daemon/data:/opt/mcsm/daemon/data
+      - ${APP_DATA_DIR}/data/daemon/logs:/opt/mcsm/daemon/logs
+      - /var/run/docker.sock:/var/run/docker.sock

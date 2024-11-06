@@ -1,0 +1,72 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+CONFIG_JSON=$(cat <<EOF
+{
+    "ip": "null",
+    "port": 1234,
+    "prefix": "",
+    "remarks": "Default",
+    "apiKey": "null",
+    "connectOpts": {
+        "multiplex": false,
+        "reconnectionDelayMax": 3000,
+        "timeout": 3000,
+        "reconnection": true,
+        "reconnectionAttempts": 20,
+        "rejectUnauthorized": false
+    }
+}
+EOF
+)
+
+WEB_CONFIG_FOLDER="${APP_DATA_DIR}/data/web/data/RemoteServiceConfig"
+DAEMON_CONFIG_FILE="${APP_DATA_DIR}/data/daemon/data/Config/global.json"
+
+wait_for_file() {
+	local -r max_seconds="${1}"
+	local -r file="${2}"
+
+	# Wait for the file to be created
+	for i in $(seq 1 "${max_seconds}"); do
+		echo "Attempt: ${i}"
+		if [ -f "${file}" ]; then
+			echo "File found: ${file}"
+			return
+		fi
+		sleep 1
+	done
+
+	echo "Failed after ${max_seconds} seconds"
+	exit 1
+}
+
+# Wait for the DAEMON_CONFIG_FILE to be created
+wait_for_file 30 "$DAEMON_CONFIG_FILE"
+
+# Update CONFIG_JSON with values from DAEMON_CONFIG_FILE
+DAEMON_CONFIG=$(jq -r '.key, .port' "$DAEMON_CONFIG_FILE")
+DAEMON_IP=${APP_DOMAIN}
+DAEMON_KEY=$(echo "$DAEMON_CONFIG" | sed -n '1p')
+DAEMON_PORT=$(echo "$DAEMON_CONFIG" | sed -n '2p')
+
+# Update the CONFIG_JSON with the values from the DAEMON_CONFIG_FILE
+CONFIG_JSON=$(jq -n \
+    --argjson CONFIG_JSON "$CONFIG_JSON" \
+    --arg IP "$DAEMON_IP" \
+    --arg PORT "$DAEMON_PORT" \
+    --arg KEY "$DAEMON_KEY" \
+    '$CONFIG_JSON | .ip = $IP | .port = $PORT | .apiKey = $KEY'
+)
+
+# Save the updated CONFIG_JSON to the appropriate file
+mkdir -p "$WEB_CONFIG_FOLDER"
+
+if [ -f "${WEB_CONFIG_FOLDER}/default.json" ]; then
+    echo "default.json already exists. Exiting..."
+    exit 0
+else
+    echo "default.json does not exist. Creating..."
+    echo "$CONFIG_JSON" > "${WEB_CONFIG_FOLDER}/default.json"
+    "${UMBREL_ROOT}/scripts/app" restart hugofnm-minecraft-server
+fi

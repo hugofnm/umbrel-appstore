@@ -2,6 +2,7 @@ manifestVersion: 1.1
 id: hugofnm-gitlab
 name: GitLab
 tagline: Software. Faster.
+icon: https://getumbrel.github.io/umbrel-apps-gallery/gitlab/icon.svg
 category: developer
 version: "17.5.1"
 port: 8929
@@ -54,9 +55,9 @@ submission: https://github.com/getumbrel/umbrel-apps/pull/1290
 repo: https://github.com/zengxs/gitlab-arm64
 support: https://github.com/zengxs/gitlab-arm64/issues
 gallery:
-  - 1.jpg
-  - 2.jpg
-  - 3.jpg
+  - https://getumbrel.github.io/umbrel-apps-gallery/gitlab/1.jpg
+  - https://getumbrel.github.io/umbrel-apps-gallery/gitlab/2.jpg
+  - https://getumbrel.github.io/umbrel-apps-gallery/gitlab/3.jpg
 releaseNotes: >-
   This version contains important bug and security fixes, and we strongly recommend that all self-managed GitLab installations be upgraded immediately. 
 

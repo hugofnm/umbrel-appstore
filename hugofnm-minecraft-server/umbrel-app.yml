@@ -1,0 +1,37 @@
+manifestVersion: 1.1
+id: hugofnm-minecraft-server
+name: Minecraft Server
+tagline: Install a Minecraft server on your Umbrel (via MCSManager)
+icon: https://cdn.worldvectorlogo.com/logos/minecraft-1.svg
+category: Media
+version: "10.4.3"
+port: 23333
+description: >-
+  Play Minecraft with your friends on your own server! 
+  
+  
+  This app allows you to install a Minecraft server on your Umbrel using MCSManager, a powerful and user-friendly web-based control panel for managing Minecraft servers. 
+  
+  You can create multiple instances, install mods, and customize settings with ease. 
+  
+  Get ready to explore, build, and survive in your own Minecraft world!
+
+
+  ⚠️ - This app can be RAM-intensive (+4GB recommended).
+
+developer: MCSManager
+website: https://mcsmanager.com/
+submitter: hugofnm
+submission: https://github.com/getumbrel/umbrel-apps/pull/
+repo: https://github.com/MCSManager/MCSManager
+support: https://github.com/MCSManager/MCSManager/issues
+gallery:
+  - https://github.com/MCSManager/MCSManager/raw/master/.github/panel-image.png
+  - https://github.com/MCSManager/MCSManager/raw/master/.github/panel-instances.png
+  - https://static.wikia.nocookie.net/minecraft_gamepedia/images/3/3f/Beta.png
+releaseNotes: >
+  
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
