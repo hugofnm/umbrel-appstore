@@ -4,7 +4,7 @@ name: GitLab
 tagline: Software. Faster.
 icon: https://getumbrel.github.io/umbrel-apps-gallery/gitlab/icon.svg
 category: developer
-version: "17.5.1"
+version: "17.7.0"
 port: 8929
 description: >-
   ⚠️ This app is RAM-intensive (+6GB recommended) and can take 15-20 minutes to start after installation on low-powered devices.
@@ -59,29 +59,22 @@ gallery:
   - https://getumbrel.github.io/umbrel-apps-gallery/gitlab/2.jpg
   - https://getumbrel.github.io/umbrel-apps-gallery/gitlab/3.jpg
 releaseNotes: >-
-  This version contains important bug and security fixes, and we strongly recommend that all self-managed GitLab installations be upgraded immediately. 
+  ⚠️ This version contains important bug and security fixes, and we strongly recommend that all self-managed GitLab installations be upgraded immediately. 
 
 
-  Key improvements released in GitLab 17.4 and 17.5 :
-    - Enhanced branch rules editing capabilities
-    - Auto-merge when all checks pass
-    - Extension marketplace now available in the Web IDE
-    - List Kubernetes resource events
-    - GitLab Pages without wildcard DNS is generally available
-    - GitLab Pages parallel deployments in beta
-    - Advanced SAST is generally available
-    - Hide CI/CD variable values in the UI
+  The GitLab UI may be unresponsive for a few minutes after the update, which is completely normal.
 
-  Fixes :
-    - Improve OpenSSL callout message
-    - Change urgency of API project/:id/share to low
-    - Check commit message for issue close pattern setting
-    - Backport: Fixes issues with incorrectly displaying VR button
-    - Backport: Fix incorrect gitlab-shell-check filename into 17.4
-    - Update OpenSSL v3 callout to delay update to GitLab 17.7
-    - Fix Code Review AI features policies to check duo features enabled toggle
 
-  Full release notes are available at : https://about.gitlab.com/releases/2024/10/17/gitlab-17-5-released/
+  Key improvements released in GitLab 17.7 :
+    - New Planner user role
+    - New user contribution and membership mapping available in direct transfer
+    - Rotate personal, project, and group access tokens in the UI
+    - Set your preferred text editor as default
+    - Unicode 15.1 emoji support
+    - Kubernetes 1.31 support
+    - Bug fixes, performance improvements, and UI improvements
+
+  Full release notes are available at : https://about.gitlab.com/releases/2024/12/19/gitlab-17-7-released/
 dependencies: []
 path: ""
 deterministicPassword: true
