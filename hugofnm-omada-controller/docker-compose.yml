@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   server:
-    image: mbentley/omada-controller:6.2.14.11-openj9@sha256:20b0e9063e17afcdfb48f215961da495fc349655aaa13e046ff8d7a9327bbd95
+    image: mbentley/omada-controller:6.3-arm64@sha256:34efd215c3b1bcbc7b442f717f6b4ddb44ceddf376fca330e75d4cd8f95bdd55
     init: true
     restart: unless-stopped
     stop_grace_period: 60s
@@ -14,15 +14,13 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - MANAGE_HTTP_PORT=8078
+      - MANAGE_HTTP_PORT=8068
       - MANAGE_HTTPS_PORT=8043
-      - PORTAL_HTTP_PORT=8078
-      - PORTAL_HTTPS_PORT=8043
+      - PORTAL_HTTP_PORT=8068
+      - PORTAL_HTTPS_PORT=8843
+      - WEB_CONFIG_OVERRIDE=true
       - SHOW_SERVER_LOGS=true
       - SHOW_MONGODB_LOGS=false
-      - SSL_CERT_NAME="tls.crt"
-      - SSL_KEY_NAME="tls.key"
     volumes:
       - ${APP_DATA_DIR}/data/config:/opt/tplink/EAPController/data
       - ${APP_DATA_DIR}/data/logs:/opt/tplink/EAPController/logs
-      - ${APP_DATA_DIR}/data/work:/opt/tplink/EAPController/work

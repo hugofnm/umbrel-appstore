@@ -6,7 +6,7 @@ storage:
 tagline: On-Premises Omada SDN Controller
 icon: https://raw.githubusercontent.com/getumbrel/umbrel-apps-gallery/refs/heads/master/omada-controller/icon.svg
 category: Networking
-version: "6.2.14.11"
+version: "6.3"
 description: >-
   ⚠️ This app is RAM-intensive (+4GB recommended) and can take 15-20 minutes to start after installation.
 
