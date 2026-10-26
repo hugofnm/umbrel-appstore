@@ -2,11 +2,11 @@ version: "3.7"
 
 services:
   server:
-    image: mbentley/omada-controller:5.14@sha256:ce429a64b11bcc8f86fdc5aa1990a54a158de8ce83f92c316bb556f29f732afd
+    image: mbentley/omada-controller:6.2.14.11-openj9@sha256:20b0e9063e17afcdfb48f215961da495fc349655aaa13e046ff8d7a9327bbd95
     init: true
     restart: unless-stopped
     stop_grace_period: 60s
-    network_mode: host # Controller needs lots of ports for device discovery
+    network_mode: host # host network mode required for device discovery
     ulimits:
       nofile:
         soft: 4096

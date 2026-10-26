@@ -1,13 +1,14 @@
-manifestVersion: 1
+manifestVersion: 2.0
 id: hugofnm-omada-controller
 name: Omada Controller
+storage:
+  dataRoot: data
 tagline: On-Premises Omada SDN Controller
 icon: https://raw.githubusercontent.com/getumbrel/umbrel-apps-gallery/refs/heads/master/omada-controller/icon.svg
 category: Networking
-version: "5.14"
-port: 8078
+version: "6.2.14.11"
 description: >-
-  Omada Software Controller
+  ⚠️ This app is RAM-intensive (+4GB recommended) and can take 15-20 minutes to start after installation.
 
 
   A Professional and Free On-Premises Omada SDN Controller
@@ -23,11 +24,7 @@ description: >-
   - Real-Time Network Topology : Helps IT admins quickly see and troubleshoot connections at a glance.
 
   - Easier Network Maintenance : WiFi heatmap simulator, visualizable network report, and batch & multi-site management benefit network maintenance.
-
-
-  ⚠️ - This app is RAM-intensive (+4GB recommended) and can take 15-20 minutes to start after installation.
-
-developer: TP-Link / Matt Bentley
+developer: TP-Link
 website: https://github.com/mbentley/docker-omada-controller
 submitter: hugofnm
 submission: https://github.com/getumbrel/umbrel-apps/pull/1196
@@ -37,9 +34,8 @@ gallery:
   - https://raw.githubusercontent.com/getumbrel/umbrel-apps-gallery/refs/heads/master/omada-controller/1.jpg
   - https://raw.githubusercontent.com/getumbrel/umbrel-apps-gallery/refs/heads/master/omada-controller/2.jpg
   - https://raw.githubusercontent.com/getumbrel/umbrel-apps-gallery/refs/heads/master/omada-controller/3.jpg
-releaseNotes: >
-  
+releaseNotes: ""
 dependencies: []
 path: ""
-defaultUsername: ""
-defaultPassword: ""
+requiresHttps: true
+port: 8043
